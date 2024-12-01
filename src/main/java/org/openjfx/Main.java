@@ -1,8 +1,6 @@
 package org.openjfx;
 
-import javax.xml.crypto.Data;
 import java.sql.*;
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,9 +9,9 @@ public class Main {
 
         try {
             Connection conn = dbConnection.getConnection();
-            TaskData taskData = new TaskData(conn);
+            TaskDAO taskDAO = new TaskDAO(conn);
 
-            Task tt = taskData.getTask(6);
+            Task tt = taskDAO.getTask(6);
             System.out.println(tt.getTaskname());
 
             //int id = taskData.insertTask("Assignment", "Java and Database assignment with database", tt.getDeadline(), "MEDIUM");

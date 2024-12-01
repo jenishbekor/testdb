@@ -3,11 +3,11 @@ package org.openjfx;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class TaskData {
+public class TaskDAO {
 
     private Connection conn;
 
-    public TaskData(Connection conn){
+    public TaskDAO(Connection conn){
         this.conn = conn;
     }
 
