@@ -7,19 +7,8 @@ public class TaskData {
 
     private Connection conn;
 
-    public TaskData(){
-        String url = "jdbc:postgresql:testdb"; // testdb is a name of localhost database
-        String username = "postgres";
-        String password = "postgres";
-
-        try {
-            conn = DriverManager.getConnection(url, username, password);
-            System.out.println("Database is successfully connected...");
-        }
-        catch(SQLException e){
-            System.out.println(e.toString());
-        }
-
+    public TaskData(Connection conn){
+        this.conn = conn;
     }
 
     public ArrayList<Task> getAllTasks(){
